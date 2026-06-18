@@ -1,0 +1,15 @@
+# C++ Executables
+*.exe
+
+# Object files
+*.obj
+
+# Debug files
+*.pdb
+*.ilk
+
+# VS Code settings (optional)
+.vscode/
+
+# Temporary files
+*.log
