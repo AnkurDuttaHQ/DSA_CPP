@@ -3,40 +3,28 @@
 #include<cstring>
 using namespace std;
 
-void palindrome(char arr[] , int n){
-    char original[20];
-    for(int i=0;i<n ;i++){
-        original[i] = arr[i];
-    }
-    // reverse the string
-    int st=0 , end = n-1;
-    while(st<end){
-        swap(arr[st++],arr[end--]);
-    }
-
-    // check palindrome
-    bool truePalinfrome = 0;
-    bool falsePalindrome =0;
-    for(int i=0 ;i<n;i++){
-        if(original[i]==arr[i]){
-            truePalinfrome++;
+bool isPalindrome(char arr[] , int n){
+    int st = 0 , end = n-1;
+    while(st<=end){
+        if(arr[st++]!=arr[end--]){
+            return false;
         } else{
-            falsePalindrome++;
+            return true;
         }
     }
 
-    // check validity
-
-    if(!truePalinfrome){
-        cout<<"The word is not palindrome word";
-    } else{
-        cout<<"The word is palindrome word";
-    }
 }
 
 int main (){
     char word[20];
     cout<<"Enter your word to check valid palindrome or not :";
     cin >> word;
-    palindrome(word , strlen(word));
+    bool validation_palindrome;
+    validation_palindrome = isPalindrome(word,strlen(word));
+    if(validation_palindrome){
+        cout<<"The word is palindrome"<<endl;
+
+    } else{
+        cout<< "The word is not palindrome";
+    }
 }
