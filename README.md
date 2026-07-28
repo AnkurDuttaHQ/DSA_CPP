@@ -1,1 +1,1 @@
-## Starting with new journey with dsa
+## Starting a new journey with Data Structures & Algorithms with c++ 
