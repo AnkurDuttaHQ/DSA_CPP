@@ -1,4 +1,4 @@
-// Sum of N native numbers using recursion
+//Sum of N native numbers using recursion
 #include <iostream>
 using namespace std;
 
