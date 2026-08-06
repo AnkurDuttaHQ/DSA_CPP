@@ -2,7 +2,7 @@ public class ExceptionDemo {
 
     int[] arr = {1, 2, 3};
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         System.out.println("Main starts");
 
@@ -43,5 +43,21 @@ public class ExceptionDemo {
             System.out.println("Null Pointer Exception handled");
             System.out.println(e.getMessage());
         }
+    }
+
+
+}
+
+class Test {
+    public static void displayArray(int[] arr){
+        System.out.println("Array elements are: ");
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        displayArray(arr);
     }
 }
