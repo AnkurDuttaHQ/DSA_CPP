@@ -11,8 +11,8 @@ public class user{
         // Four Student Objects
         StudentmanagementSystem s1 = new StudentmanagementSystem(1, 101, 20, "ankur@gmail.com");
         StudentmanagementSystem s2 = new StudentmanagementSystem(2, 102, 21, "rahul@gmail.com");
-        StudentmanagementSystem s3 = new StudentmanagementSystem(3, 103, 19, "priya@gmail.com");
-        StudentmanagementSystem s4 = new StudentmanagementSystem(4, 104, 22, "rohit@gmail.com");
+        StudentmanagementSystem s3 = new StudentmanagementSystem(3, 103, 19, "subha@gmail.com");
+        StudentmanagementSystem s4 = new StudentmanagementSystem(4, 104, 22, "monika@gmail.com");
 
         int choice;
 

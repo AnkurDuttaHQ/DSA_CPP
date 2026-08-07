@@ -30,6 +30,7 @@ public class StudentmanagementSystem {
     }
 
     public int getAge() {
+        
         return age;
     }
 
