@@ -1,22 +1,27 @@
 #include <iostream>
-#include <unordered_set>
+#include <string>
 using namespace std;
 
-string removeDuplicates(string s) {
-    unordered_set<char> seen;
-    string result;
+void removeDuplicates(string str , string ans , int i , bool map[26]){
 
-    for (char ch : s) {
-        if (seen.find(ch) == seen.end()) {
-            seen.insert(ch);
-            result += ch;
-        }
+    if(i==str.size()){
+        cout << "ans :"<<ans;
+        return;
     }
+    char ch = str[i];
+    int map_idx = (int)(ch - 'a');
 
-    return result;
+    if(map[map_idx]){
+        removeDuplicates(str , ans , i+1 , map);
+    } else{
+        map[map_idx] = true;
+        removeDuplicates(str , ans+str[i] ,i+1,map);
+    }
 }
 
-int main() {
-    cout << removeDuplicates("randommm"); // progamin
-    return 0;
+int main (){
+    string str = "appnnacollege";
+    bool map[26] = {false};
+    string ans = "";
+    removeDuplicates(str , ans , 0 , map);
 }
