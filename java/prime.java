@@ -7,9 +7,11 @@ class prime {
             if(num % i == 0){
                 System.err.println("The number is not prime");
                 break;
-            } else{
-                System.out.println("The number is prime");
             }
+
+           
         }
+
+         System.err.println("The number is prime");
     }
 }
